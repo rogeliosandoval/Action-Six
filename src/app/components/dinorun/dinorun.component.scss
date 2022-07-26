@@ -1,0 +1,54 @@
+#game {
+    width: 800px;
+    height: 300px;
+    border: 1px solid #ffffff;
+}
+
+#character {
+    width: 20px;
+    height: 65px;
+    background: lightblue;
+    position: relative;
+    top: 233px;
+    left: 100px;
+}
+
+.animate {
+    animation: jump 500ms linear;
+}
+
+#block {
+    width: 20px;
+    height: 20px;
+    background: red;
+    position: relative;
+    top: 213px;
+    left: 777px;
+    animation: block 3s infinite linear;
+}
+
+#turtle {
+    width: 20px;
+    height: 20px;
+    background: green;
+    position: relative;
+    top: 193px;
+    left: 777px;
+    animation: block 5s infinite linear;
+}
+
+.none {
+    display: none;
+}
+
+@keyframes jump{
+    0%{top: 233px;}
+    30%{top: 180px;}
+    70%{top: 180px;}
+    100%{top: 233px;}
+}
+
+@keyframes block {
+    0%{left: 768px;}
+    100%{left: 0px;}
+}
