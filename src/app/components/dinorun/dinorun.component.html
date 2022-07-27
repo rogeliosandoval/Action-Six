@@ -1,9 +1,69 @@
-<div class="d-flex justify-content-center my-4">
-    <div id="game" (click)="animate()">
-        <div #character id="character" [ngClass]="{'animate' : jump}"></div>
-        <div #block id="block"></div>
-        <div #turtle id="turtle"></div>
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <div class="bodyText text-center mt-4 mb-2">
+            The game is simple. Just jump over the rocks and cactuses. Good luck!
+        </div>
+    </div>
+    <div class="click-info-one">
+        <div class="bodyText text-center" style="color: powderblue;">
+            Press
+            <img class="spacebar" src="../../../assets/dinorun/space.png" alt="spacebar">
+            to jump!
+        </div>
+    </div>
+    <div class="click-info-two">
+        <div class="bodyText text-center" style="font-size: 15px; color: powderblue;">
+            <img class="mouse my-2" src="../../../assets/dinorun/arrow.png" alt="mouse">
+            <br>
+            or click the canvas.
+        </div>
+    </div>
+    <div class="click-info-three">
+        <div class="bodyText text-center my-4" style="font-size: 15px; color: powderblue;">
+            tap the canvas to jump
+        </div>
     </div>
 </div>
-
-<button (click)="reset()">restart</button>
+<div class="d-flex justify-content-center my-3 mt-md-5 mb-4">
+    <div #game #gamedisplayplaying id="game" class="game-display" (click)="animate()">
+        <div #character id="character" [ngClass]="{'animate' : jump}">
+            <img class="dino" *ngIf="!jump" src="../../../assets/dinorun/dino.gif" alt="dino">
+            <img class="dino" *ngIf="jump" src="../../../assets/dinorun/dino-still.png" alt="dino-still">
+        </div>
+        <div class="game-over-text" *ngIf="dead">Game Over</div>
+        <img class="dino-cry" *ngIf="dead" src="../../../assets/dinorun/dino-cry.png" alt="dino-cry">
+        <div #block id="block">
+            <img class="cactus" src="../../../assets/dinorun/cactus.png" alt="cactus">
+        </div>
+        <div #turtle id="turtle">
+            <img class="rock" src="../../../assets/dinorun/rock.png" alt="rock">
+        </div>
+    </div>
+    <div #game #gamedisplaybegin id="game" (click)="animate()">
+        <div #character id="character" [ngClass]="{'animate' : jump}">
+            <img class="dino" *ngIf="!jump" src="../../../assets/dinorun/dino.gif" alt="dino">
+            <img class="dino" *ngIf="jump" src="../../../assets/dinorun/dino-still.png" alt="dino-still">
+        </div>
+        <div class="d-flex justify-content-center">
+            <img class="title" src="../../../assets/dinorun/dinorun-title.png" alt="title">
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center" *ngIf="begin" (click)="startGame()">
+    <button class="button-82-pushable" role="button">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Start Game
+        </span>
+    </button>
+</div>
+<div class="container d-flex justify-content-center" *ngIf="dead" (click)="reset()">
+    <button class="button-82-pushable" role="button">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Play Again
+        </span>
+    </button>
+</div>

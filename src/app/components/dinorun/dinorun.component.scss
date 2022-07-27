@@ -1,54 +1,264 @@
+.bodyText {
+  color: white;
+  font-size: 15px;
+}
+
+.click-info-one, .click-info-two {
+  display: none;
+}
+
 #game {
-    width: 800px;
-    height: 300px;
-    border: 1px solid #ffffff;
+  width: 800px;
+  height: 300px;
+  border: 1px solid #ffffff;
+  background-image: url("../../../assets/dinorun/desert-two.webp");
+  background-size: cover;
+  background-position: 0px 0px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.game-display {
+  display: none;
+}
+
+.game-over-background {
+  background-image: url("../../../assets/dinorun/desert-two.webp") !important;
+  background-size: cover;
+  background-position: 0px -250px;
+  filter: grayscale(100%);
 }
 
 #character {
-    width: 20px;
-    height: 65px;
-    background: lightblue;
-    position: relative;
-    top: 233px;
-    left: 100px;
+  width: 20px;
+  height: 65px;
+  // background: lightblue;
+  position: relative;
+  top: 233px;
+  left: 100px;
+}
+
+.dino {
+  height: 100px;
+  width: auto;
+  position: relative;
+  left: -42px;
+  top: -17px;
+}
+
+.dino-cry {
+  height: 100px;
+  width: auto;
+  position: relative;
+  left: 58px;
+  top: 195px;
+}
+
+.game-over-text {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  left: 115px;
+  top: 100px;
 }
 
 .animate {
-    animation: jump 500ms linear;
+  animation: jump 500ms linear;
 }
 
+
 #block {
-    width: 20px;
-    height: 20px;
-    background: red;
-    position: relative;
-    top: 213px;
-    left: 777px;
-    animation: block 3s infinite linear;
+  width: 20px;
+  height: 20px;
+  // background: red;
+  position: relative;
+  top: 213px;
+  left: 777px;
+  animation: block 3s infinite linear;
+}
+
+.cactus {
+  height: 40px;
+  width: auto;
+  position: relative;
+  left: -10px;
+  top: -20px;
 }
 
 #turtle {
-    width: 20px;
-    height: 20px;
-    background: green;
-    position: relative;
-    top: 193px;
-    left: 777px;
-    animation: block 5s infinite linear;
+  width: 20px;
+  height: 20px;
+  // background: green;
+  position: relative;
+  top: 193px;
+  left: 777px;
+  animation: block 5s infinite linear;
+}
+
+.rock {
+  height: 32px;
+  width: auto;
+  position: relative;
+  left: -32px;
+  top: -9px;
 }
 
 .none {
-    display: none;
+  display: none;
+}
+
+.some {
+  display: block !important;
 }
 
 @keyframes jump{
-    0%{top: 233px;}
-    30%{top: 180px;}
-    70%{top: 180px;}
-    100%{top: 233px;}
+  0%{top: 233px;}
+  30%{top: 180px;}
+  70%{top: 180px;}
+  100%{top: 233px;}
 }
 
 @keyframes block {
-    0%{left: 768px;}
-    100%{left: 0px;}
+  0%{left: 768px;}
+  100%{left: 10px;}
+}
+
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(240deg 100% 16%) 0%,
+    hsl(240deg 100% 32%) 8%,
+    hsl(240deg 100% 32%) 92%,
+    hsl(240deg 100% 16%) 100%
+  );
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(200deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+  .bodyText {
+    color: white;
+  }
+
+  #game {
+    background-position: 0px -250px;
+  }
+
+  .click-info-one, .click-info-two {
+    display: block;
+  }
+
+  .click-info-three {
+    display: none;
+  }
+
+  .spacebar {
+    width:18%;
+  }
+  
+  .mouse {
+    width: 2%;
+  }
+
+  .game-over-text {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    left: 348px;
+    top: 100px;
+  }
+
 }

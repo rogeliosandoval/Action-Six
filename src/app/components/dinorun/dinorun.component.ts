@@ -7,11 +7,15 @@ import { Component, ElementRef, HostListener, ViewChild } from "@angular/core";
 })
 
 export class DinoRun {
+    @ViewChild('game', { static: true }) game!: ElementRef;
     @ViewChild('character', { static: true }) character!: ElementRef;
     @ViewChild('block', { static: true }) block!: ElementRef;
     @ViewChild('turtle', { static: true }) turtle!: ElementRef;
-    
+    @ViewChild('gamedisplaybegin', { static: true }) gamedisplaybegin!: ElementRef;
+    @ViewChild('gamedisplayplaying', { static: true }) gamedisplayplaying!: ElementRef;
     jump = false;
+    dead = false;
+    begin = true;
 
     ngOnInit(){
         setInterval(() => { this.checkCollision(); }, 10);
@@ -46,21 +50,34 @@ export class DinoRun {
         var turtleLeft = parseInt(window.getComputedStyle(this.turtle.nativeElement).left);
 
         if (blockLeft < 115 && blockLeft > 85 && characterTop >=233) {
-            alert("boom");
             this.block.nativeElement.classList.add('none');
             this.turtle.nativeElement.classList.add('none');
+            this.character.nativeElement.classList.add('none');
+            this.game.nativeElement.classList.add('game-over-background');
+            this.dead = true;
         }
 
         if (turtleLeft < 115 && turtleLeft > 85 && characterTop >=233) {
-            alert("boom");
             this.block.nativeElement.classList.add('none');
             this.turtle.nativeElement.classList.add('none');
+            this.character.nativeElement.classList.add('none');
+            this.game.nativeElement.classList.add('game-over-background');
+            this.dead = true;
         }
+    }
+
+    startGame() {
+        this.begin = false;
+        this.gamedisplaybegin.nativeElement.classList.add('none');
+        this.gamedisplayplaying.nativeElement.classList.add('some');
     }
 
     //resets the game
     reset() {
         this.block.nativeElement.classList.remove('none');
         this.turtle.nativeElement.classList.remove('none');
+        this.character.nativeElement.classList.remove('none');
+        this.game.nativeElement.classList.remove('game-over-background');
+        this.dead = false;
     }
 }
