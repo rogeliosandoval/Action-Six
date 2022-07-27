@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-center my-4">
+    <div *ngIf="begin" #game id="game">
+        <div #character id="character">
+            <img class="bird" src="../../../assets/birdie/bird.png" alt="bird">
+        </div>
+        <div class="d-flex justify-content-center">
+            <img class="title mt-4" src="../../../assets/birdie/fly-away-title.png" alt="title">
+        </div>
+    </div>
+    <div *ngIf="!begin" #game id="game">
+        <div #character id="character">
+            <img class="bird" src="../../../assets/birdie/bird.png" alt="bird">
+        </div>
+        <div *ngIf="gameOver" class="d-flex justify-content-center">
+            <img class="title mt-5" src="../../../assets/birdie/fly-away-title.png" alt="title">
+        </div>
+        <div #block class="block" id="block">
+            <img class="treebranch" src="../../../assets/birdie/treebranch-one.png" alt="treebranch">
+        </div>
+        <div #hole class="hole" id="hole">
+            <img class="leaf" src="../../../assets/birdie/leaf.png" alt="leaf">
+        </div>
+        <div #block2 class="block2" id="block2">
+            <img class="treebranch" src="../../../assets/birdie/treebranch-one.png" alt="treebranch">
+        </div>
+        <div #hole2 class="hole2" id="hole2">
+            <img class="leaf" src="../../../assets/birdie/leaf.png" alt="leaf">
+        </div>
+        <div #block3 class="block3" id="block3">
+            <img class="treebranch-leaf" src="../../../assets/birdie/treebranch-two.png" alt="treebranch">
+        </div>
+        <div #hole3 class="hole3" id="hole3">
+            <img class="leaf" src="../../../assets/birdie/leaf.png" alt="leaf">
+        </div>
+        <div #block4 class="block4" id="block4">
+            <img class="cloud" src="../../../assets/birdie/cloud.png" alt="cloud">
+        </div>
+        <div #block5 class="block5" id="block5">
+            <img class="cloud-two" src="../../../assets/birdie/cloud.png" alt="cloud">
+        </div>
+    </div>
+</div>
+
+<div class="container d-flex justify-content-center" *ngIf="begin" (click)="startGame()">
+    <button class="button-82-pushable" role="button">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Start Game
+        </span>
+    </button>
+</div>
+
+<div class="container d-flex justify-content-center" *ngIf="gameOver" (click)="reset()">
+    <button class="button-82-pushable" role="button">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Play Again
+        </span>
+    </button>
+</div>
