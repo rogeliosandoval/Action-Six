@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="bodyText text-center my-5">
+        Are you bored? Get some ideas here!
+    </div>
+    <div class="card">
+        <div class="titleText pt-5 text-center" *ngIf="!random">
+            Get A Random Idea!
+        </div>
+        <div class="titleText text-center my-4">
+            {{activity?.activity}}
+        </div>
+        <div class="bodyText p-4" *ngIf="random">
+            <div class="row">
+                <div class="col-md-6">
+                    <b>Type:</b> {{activity?.type}}
+                    <br>
+                    <br>
+                    <b>Participants:</b> {{activity?.participants}}
+                </div>
+                <div class="col-md-6">
+                    <b>Price:</b> {{activity?.price}}
+                    <br>
+                    <br>
+                    <b>Accessibility:</b> {{activity?.accessibility}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center my-5" (click)="getRandom()">
+    <button class="button-82-pushable" role="button">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Random Idea
+        </span>
+    </button>
+</div>
