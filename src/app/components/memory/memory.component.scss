@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    gap: 16px;
+
+    justify-content: center;
+}
+
+.bodyText {
+    color: white;
+    font-size: 17px;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+    .bodyText {
+      font-size: 19px;
+      color: white;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 150px);
+    }
+}
