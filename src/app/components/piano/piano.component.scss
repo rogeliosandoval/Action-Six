@@ -1,0 +1,95 @@
+.bodyText {
+    color: white;
+    font-size: 17px;
+}
+
+.letter-white {
+    position: relative;
+    top: 360px;
+    left: 38px;
+}
+
+
+.letter-black {
+    position: relative;
+    top: 200px;
+    left: 20px;
+}
+
+.piano {
+    display: flex;
+}
+
+.key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+}
+
+.white {
+    --width: 100px;
+    background-color: white;
+    border: 1px solid #333;
+}
+
+.white-active {
+    background-color: #CCC !important;
+}
+
+.white:active {
+    background-color: #CCC;
+}
+
+.black {
+    --width: 60px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+}
+
+.black-active {
+    background-color: #333;
+}
+
+.black:active {
+    background-color: #333;
+}
+
+.phone-message {
+    display: block;
+}
+
+@media (max-width: 576px) {
+    .piano {
+        position: relative;
+        top:140px;
+        transform: rotate(-0.25turn);
+    }
+
+    .key {
+        height: calc(var(--width) * 4);
+        width: var(--width);
+    }
+
+    .letter-white {
+        display: none;
+    }
+    
+    
+    .letter-black {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .bodyText {
+      font-size: 19px;
+      color: white;
+    }
+
+    .phone-message {
+        display: none;
+    }
+
+}
