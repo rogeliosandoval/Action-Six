@@ -4,35 +4,370 @@
     </div>
     <div class="card">
         <div class="titleText pt-5 text-center" *ngIf="!random">
-            Get A Random Idea!
+            Get a random idea.
         </div>
         <div class="titleText text-center my-4">
-            {{activity?.activity}}
+            {{randomActivity?.activity}}
         </div>
         <div class="bodyText p-4" *ngIf="random">
             <div class="row">
-                <div class="col-md-6">
-                    <b>Type:</b> {{activity?.type}}
+                <div class="col-md-6 text-center">
+                    <b>Type:</b> {{randomActivity?.type}}
                     <br>
                     <br>
-                    <b>Participants:</b> {{activity?.participants}}
+                    <b>Participants:</b> {{randomActivity?.participants}}
+                    <br class="d-block d-md-none">
+                    <br class="d-block d-md-none">
                 </div>
-                <div class="col-md-6">
-                    <b>Price:</b> {{activity?.price}}
+                <div class="col-md-6 text-center">
+                    <b>Price:</b> {{randomActivity?.price}}
                     <br>
                     <br>
-                    <b>Accessibility:</b> {{activity?.accessibility}}
+                    <b>Accessibility:</b> {{randomActivity?.accessibility}}
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container d-flex justify-content-center my-5" (click)="getRandom()">
-    <button class="button-82-pushable" role="button">
+<div class="container d-flex justify-content-center my-5">
+    <button class="button-82-pushable" role="button" (click)="getRandom()">
         <span class="button-82-shadow"></span>
         <span class="button-82-edge"></span>
         <span class="button-82-front text">
           Random Idea
+        </span>
+    </button>
+</div>
+<div class="container">
+    <div class="card">
+        <div class="titleText pt-5 text-center" *ngIf="!relax">
+            You probably just need to relax...
+        </div>
+        <div class="titleText text-center my-4">
+            {{relaxActivity?.activity}}
+        </div>
+        <div class="bodyText p-4" *ngIf="relax">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <b>Type:</b> {{relaxActivity?.type}}
+                    <br>
+                    <br>
+                    <b>Participants:</b> {{relaxActivity?.participants}}
+                    <br class="d-block d-md-none">
+                    <br class="d-block d-md-none">
+                </div>
+                <div class="col-md-6 text-center">
+                    <b>Price:</b> {{relaxActivity?.price}}
+                    <br>
+                    <br>
+                    <b>Accessibility:</b> {{relaxActivity?.accessibility}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center my-5">
+    <button class="button-82-pushable" role="button" (click)="getRelax()">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Relax Idea
+        </span>
+    </button>
+</div>
+<div class="container">
+    <div class="card">
+        <div class="titleText pt-5 text-center" *ngIf="!social">
+            Feeling social? Let's see what you can do.
+        </div>
+        <div class="titleText text-center my-4">
+            {{socialActivity?.activity}}
+        </div>
+        <div class="bodyText p-4" *ngIf="social">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <b>Type:</b> {{socialActivity?.type}}
+                    <br>
+                    <br>
+                    <b>Participants:</b> {{socialActivity?.participants}}
+                    <br class="d-block d-md-none">
+                    <br class="d-block d-md-none">
+                </div>
+                <div class="col-md-6 text-center">
+                    <b>Price:</b> {{socialActivity?.price}}
+                    <br>
+                    <br>
+                    <b>Accessibility:</b> {{socialActivity?.accessibility}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center my-5">
+    <button class="button-82-pushable" role="button" (click)="getSocial()">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Social Idea
+        </span>
+    </button>
+</div>
+<div class="container">
+    <div class="card">
+        <div class="titleText pt-5 text-center" *ngIf="!recreational">
+            Something recreational.
+        </div>
+        <div class="titleText text-center my-4">
+            {{recreationalActivity?.activity}}
+        </div>
+        <div class="bodyText p-4" *ngIf="recreational">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <b>Type:</b> {{recreationalActivity?.type}}
+                    <br>
+                    <br>
+                    <b>Participants:</b> {{recreationalActivity?.participants}}
+                    <br class="d-block d-md-none">
+                    <br class="d-block d-md-none">
+                </div>
+                <div class="col-md-6 text-center">
+                    <b>Price:</b> {{recreationalActivity?.price}}
+                    <br>
+                    <br>
+                    <b>Accessibility:</b> {{recreationalActivity?.accessibility}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center my-5">
+    <button class="button-82-pushable" role="button" (click)="getRecreational()">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Recreational Idea
+        </span>
+    </button>
+</div>
+<div class="container">
+    <div class="card">
+        <div class="titleText pt-5 text-center" *ngIf="!busy">
+            You like staying busy dont you?
+        </div>
+        <div class="titleText text-center my-4">
+            {{busyActivity?.activity}}
+        </div>
+        <div class="bodyText p-4" *ngIf="busy">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <b>Type:</b> {{busyActivity?.type}}
+                    <br>
+                    <br>
+                    <b>Participants:</b> {{busyActivity?.participants}}
+                    <br class="d-block d-md-none">
+                    <br class="d-block d-md-none">
+                </div>
+                <div class="col-md-6 text-center">
+                    <b>Price:</b> {{busyActivity?.price}}
+                    <br>
+                    <br>
+                    <b>Accessibility:</b> {{busyActivity?.accessibility}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center my-5">
+    <button class="button-82-pushable" role="button" (click)="getBusy()">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Busy Idea
+        </span>
+    </button>
+</div>
+<div class="container">
+    <div class="card">
+        <div class="titleText pt-5 text-center" *ngIf="!cooking">
+            Cooking is always fun.
+        </div>
+        <div class="titleText text-center my-4">
+            {{cookingActivity?.activity}}
+        </div>
+        <div class="bodyText p-4" *ngIf="cooking">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <b>Type:</b> {{cookingActivity?.type}}
+                    <br>
+                    <br>
+                    <b>Participants:</b> {{cookingActivity?.participants}}
+                    <br class="d-block d-md-none">
+                    <br class="d-block d-md-none">
+                </div>
+                <div class="col-md-6 text-center">
+                    <b>Price:</b> {{cookingActivity?.price}}
+                    <br>
+                    <br>
+                    <b>Accessibility:</b> {{cookingActivity?.accessibility}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center my-5">
+    <button class="button-82-pushable" role="button" (click)="getCooking()">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Cooking Idea
+        </span>
+    </button>
+</div>
+<div class="container">
+    <div class="card">
+        <div class="titleText pt-5 text-center" *ngIf="!education">
+            Education is very important. Let's stay educated.
+        </div>
+        <div class="titleText text-center my-4">
+            {{educationalActivity?.activity}}
+        </div>
+        <div class="bodyText p-4" *ngIf="education">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <b>Type:</b> {{educationalActivity?.type}}
+                    <br>
+                    <br>
+                    <b>Participants:</b> {{educationalActivity?.participants}}
+                    <br class="d-block d-md-none">
+                    <br class="d-block d-md-none">
+                </div>
+                <div class="col-md-6 text-center">
+                    <b>Price:</b> {{educationalActivity?.price}}
+                    <br>
+                    <br>
+                    <b>Accessibility:</b> {{educationalActivity?.accessibility}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center my-5">
+    <button class="button-82-pushable" role="button" (click)="getEducation()">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Educational Idea
+        </span>
+    </button>
+</div>
+<div class="container">
+    <div class="card">
+        <div class="titleText pt-5 text-center" *ngIf="!charity">
+            Do you like donating to charity? You're one of a kind.
+        </div>
+        <div class="titleText text-center my-4">
+            {{charityActivity?.activity}}
+        </div>
+        <div class="bodyText p-4" *ngIf="charity">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <b>Type:</b> {{charityActivity?.type}}
+                    <br>
+                    <br>
+                    <b>Participants:</b> {{charityActivity?.participants}}
+                    <br class="d-block d-md-none">
+                    <br class="d-block d-md-none">
+                </div>
+                <div class="col-md-6 text-center">
+                    <b>Price:</b> {{charityActivity?.price}}
+                    <br>
+                    <br>
+                    <b>Accessibility:</b> {{charityActivity?.accessibility}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center my-5">
+    <button class="button-82-pushable" role="button" (click)="getCharity()">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Charity Idea
+        </span>
+    </button>
+</div>
+<div class="container">
+    <div class="card">
+        <div class="titleText pt-5 text-center" *ngIf="!diy">
+            DIY!
+        </div>
+        <div class="titleText text-center my-4">
+            {{diyActivity?.activity}}
+        </div>
+        <div class="bodyText p-4" *ngIf="diy">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <b>Type:</b> {{diyActivity?.type}}
+                    <br>
+                    <br>
+                    <b>Participants:</b> {{diyActivity?.participants}}
+                    <br class="d-block d-md-none">
+                    <br class="d-block d-md-none">
+                </div>
+                <div class="col-md-6 text-center">
+                    <b>Price:</b> {{diyActivity?.price}}
+                    <br>
+                    <br>
+                    <b>Accessibility:</b> {{diyActivity?.accessibility}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center my-5">
+    <button class="button-82-pushable" role="button" (click)="getDiy()">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          DIY Idea
+        </span>
+    </button>
+</div>
+<div class="container">
+    <div class="card">
+        <div class="titleText pt-5 text-center" *ngIf="!music">
+            Music is emotion.
+        </div>
+        <div class="titleText text-center my-4">
+            {{musicActivity?.activity}}
+        </div>
+        <div class="bodyText p-4" *ngIf="music">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <b>Type:</b> {{musicActivity?.type}}
+                    <br>
+                    <br>
+                    <b>Participants:</b> {{musicActivity?.participants}}
+                    <br class="d-block d-md-none">
+                    <br class="d-block d-md-none">
+                </div>
+                <div class="col-md-6 text-center">
+                    <b>Price:</b> {{musicActivity?.price}}
+                    <br>
+                    <br>
+                    <b>Accessibility:</b> {{musicActivity?.accessibility}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center my-5">
+    <button class="button-82-pushable" role="button" (click)="getMusic()">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Music Idea
         </span>
     </button>
 </div>
