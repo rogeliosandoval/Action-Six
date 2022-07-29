@@ -1,3 +1,18 @@
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <div class="bodyText text-center mt-4 mb-2">
+            Avoid the tree branches by going over the <img class="intro-leaf" src="../../../assets/birdie/leaf.png" alt="leaf">
+        </div>
+    </div>
+    <div class="click-info-one">
+        <div class="bodyText text-center" style="color: powderblue;">
+            Use
+            <img class="arrows" src="../../../assets/birdie/left-arrow.png" alt="">
+            <img class="arrows" src="../../../assets/birdie/right-arrow.png" alt="">
+            to move!
+        </div>
+    </div>
+</div>
 <div class="d-flex justify-content-center my-4">
     <div *ngIf="begin" #game id="game">
         <div #character id="character">
@@ -41,8 +56,8 @@
     </div>
 </div>
 
-<div class="container d-flex justify-content-center" *ngIf="begin" (click)="startGame()">
-    <button class="button-82-pushable" role="button">
+<div class="container d-flex justify-content-center" *ngIf="begin">
+    <button class="button-82-pushable" role="button" (click)="startGame()">
         <span class="button-82-shadow"></span>
         <span class="button-82-edge"></span>
         <span class="button-82-front text">
@@ -51,8 +66,8 @@
     </button>
 </div>
 
-<div class="container d-flex justify-content-center" *ngIf="gameOver" (click)="reset()">
-    <button class="button-82-pushable" role="button">
+<div class="container d-flex justify-content-center" *ngIf="gameOver">
+    <button class="button-82-pushable" role="button" (click)="reset()">
         <span class="button-82-shadow"></span>
         <span class="button-82-edge"></span>
         <span class="button-82-front text">
