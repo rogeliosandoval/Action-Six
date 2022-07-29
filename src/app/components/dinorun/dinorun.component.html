@@ -11,20 +11,13 @@
             to jump!
         </div>
     </div>
-    <div class="click-info-two">
-        <div class="bodyText text-center" style="font-size: 15px; color: powderblue;">
-            <img class="mouse my-2" src="../../../assets/dinorun/arrow.png" alt="mouse">
-            <br>
-            or click the canvas.
-        </div>
-    </div>
     <div class="click-info-three">
-        <div class="bodyText text-center my-4" style="font-size: 15px; color: powderblue;">
+        <div class="bodyText text-center mt-2" style="font-size: 15px; color: powderblue;">
             tap the canvas to jump
         </div>
     </div>
 </div>
-<div class="d-flex justify-content-center my-3 mt-md-5 mb-4">
+<div class="d-flex justify-content-center mt-3 mt-md-0 mb-4">
     <div #game #gamedisplayplaying id="game" class="game-display" (click)="animate()">
         <div #character id="character" [ngClass]="{'animate' : jump}">
             <img class="dino" *ngIf="!jump" src="../../../assets/dinorun/dino.gif" alt="dino">
@@ -49,8 +42,8 @@
         </div>
     </div>
 </div>
-<div class="container d-flex justify-content-center" *ngIf="begin" (click)="startGame()">
-    <button class="button-82-pushable" role="button">
+<div class="container d-flex justify-content-center" *ngIf="begin">
+    <button class="button-82-pushable" role="button" (click)="startGame()">
         <span class="button-82-shadow"></span>
         <span class="button-82-edge"></span>
         <span class="button-82-front text">
@@ -58,8 +51,8 @@
         </span>
     </button>
 </div>
-<div class="container d-flex justify-content-center" *ngIf="dead" (click)="reset()">
-    <button class="button-82-pushable" role="button">
+<div class="container d-flex justify-content-center" *ngIf="dead">
+    <button class="button-82-pushable" role="button" (click)="reset()">
         <span class="button-82-shadow"></span>
         <span class="button-82-edge"></span>
         <span class="button-82-front text">
