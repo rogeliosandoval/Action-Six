@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300&display=swap');
+
+* {
+    font-family: 'Saira', sans-serif;
+    line-height: 1.2em;
+}
+
+body {
+    background-image: url("./assets/stars.jpeg");
+    background-size: cover;
+    overflow-x: hidden;
+    font-family: 'Mochiy Pop One', sans-serif;
+    margin: 0; 
+}
+
+html, body { 
+    height: 100%;
+}
+
