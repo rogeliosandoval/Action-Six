@@ -1,0 +1,26 @@
+.bodyText {
+    font-size: 17px;
+    color: white;
+}
+
+.bodyText2 {
+    font-size: 25px;
+    color: white;
+}
+
+.titleText {
+    font-size: 30px;
+    color: powderblue;
+    text-transform: uppercase;
+}
+
+.robo {
+    width: 50%;
+}
+
+@media (min-width: 768px) {
+    .bodyText {
+        font-size: 19px;
+        color: white;
+    }
+}
