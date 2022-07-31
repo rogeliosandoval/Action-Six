@@ -30,6 +30,7 @@ export class DinoRun {
                 this.jump = false;
             }, 500)
         }
+        event.preventDefault();
     }
 
     //gets the dino to jump when game is clicked
