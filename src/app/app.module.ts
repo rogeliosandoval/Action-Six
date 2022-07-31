@@ -7,6 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { Navbar } from './components/navbar/navbar.component';
@@ -20,17 +22,22 @@ import { RestartDialogComponent } from './components/memory/restart-dialog/resta
 import { Bored } from './components/bored/bored.compopnent';
 import { Piano } from './components/piano/piano.component';
 import { Cruise } from './components/cruise/cruise.component';
+import { About } from './components/about/about.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Contact } from './components/contact/contact.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: Home },
-  { path: 'dinorun', component: DinoRun },
-  { path: 'flyaway', component: Birdie },
-  { path: 'matchmemory', component: Memory },
-  { path: 'bored', component: Bored },
-  { path: 'piano', component: Piano },
-  { path: 'cruise', component: Cruise }
+  { path: 'home', component: Home, data: { animation: 'fader' } },
+  { path: 'dinorun', component: DinoRun, data: { animation: 'fader' } },
+  { path: 'flyaway', component: Birdie, data: { animation: 'fader' } },
+  { path: 'matchmemory', component: Memory, data: { animation: 'fader' } },
+  { path: 'bored', component: Bored, data: { animation: 'fader' } },
+  { path: 'piano', component: Piano, data: { animation: 'fader' } },
+  { path: 'cruise', component: Cruise, data: { animation: 'fader' } },
+  { path: 'about', component: About, data: { animation: 'fader' } },
+  { path: 'contact', component: Contact, data: { animation: 'fader' } }
 ]
 
 @NgModule({
@@ -46,12 +53,17 @@ const routes: Routes = [
     RestartDialogComponent,
     Bored,
     Piano,
-    Cruise
+    Cruise,
+    About,
+    Contact
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
     BrowserAnimationsModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,

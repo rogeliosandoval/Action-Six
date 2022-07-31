@@ -6,6 +6,10 @@
     line-height: 1.2em;
 }
 
+ngb-modal-backdrop {
+    z-index: 1050 !important;
+}
+
 body {
     background-image: url("./assets/stars.jpeg");
     background-size: cover;
