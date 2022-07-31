@@ -6,7 +6,7 @@
                 Welcome!
             </div>
             <div class="bodyText2 text-center">
-                Action 6 is a virtual arcade/resource center for all of your random needs! Come and play or learn something new!
+                Action 6 is a virtual "arcade" made for you to kill some time if you're bored. Still bored? We can give you some ideas. Come and play or learn something new!
             </div>
         </div>
         <div class="col-md-6 mt-5 mt-md-0">
@@ -93,5 +93,95 @@
             </a>
         </div>
 
+    </div>
+    <div class="row my-3 my-md-5">
+        <div class="col-md-6">
+            <div class="d-flex justify-content-center">
+                <img class="robo" src="../../../assets/robo-happy.gif" alt="robot">
+            </div>
+        </div>
+        <div class="col-md-6 my-auto">
+            <div class="titleText text-center my-4">
+                About
+            </div>
+            <div class="bodyText2 text-center">
+                Arcade 6 is a place to kill some time. Dinorun was inspired by the famous google error message. Fly Away and Cruise are pretty identical but have a very simple concept. Thank you for playing!
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-6 my-4 my-md-0">
+            <div class="titleText my-3 d-block d-md-none">
+                <span style="color:rgb(8,107,181); font-weight:bold;">|</span> Send Us A Message
+            </div>
+            <form [formGroup]="contactForm">
+
+                <div class="form-panel">
+                    <div class="form-row form-email">
+                        <input type="text" formControlName="Name" placeholder="Name" [ngClass]="{'invalid' : Name && Name.invalid && Name.touched, 'valid' : Name && Name.valid && Name.touched}">
+                        <div class="d-md-none" style="color:red; display:none;" [ngClass]="{'mobile-show' : Name && Name.invalid && Name.touched}">
+                            Please enter a name
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <div class="d-none d-md-block text-center" style="color:red; visibility:hidden;" [ngClass]="{'show' : Name && Name.invalid && Name.touched}">
+                    Please enter a name
+                </div>
+
+                <div class="form-panel">
+                    <div class="form-row form-email">
+                        <input type="email" formControlName="Email" placeholder="Email Address" [ngClass]="{'invalid' : Email && Email.invalid && Email.touched, 'valid' : Email && Email.valid && Email.touched}">
+                        <div class="d-md-none" style="color:red; display:none;" [ngClass]="{'mobile-show' : Email && Email.invalid && Email.touched}">
+                            Please enter a valid email
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <div class="d-none d-md-block text-center" style="color:red; visibility:hidden;" [ngClass]="{'show' : Email && Email.invalid && Email.touched}">
+                    Please enter a valid email
+                </div>
+
+                <div class="form-row">
+                    <textarea id="w3review" formControlName="Message" rows="4" cols="20" placeholder="Message" style="height: 155px !important;" [ngClass]="{'invalid' : Message && Message.invalid && Message.touched, 'valid' : Message && Message.valid && Message.touched}"></textarea>
+                    <div class="d-md-none" style="color:red; display:none;" [ngClass]="{'mobile-show' : Message && Message.invalid && Message.touched}">
+                        Please enter a message
+                    </div>
+                    <br>
+                </div>
+                <div class="d-none d-md-block text-center" style="color:red; visibility:hidden;" [ngClass]="{'show' : Message && Message.invalid && Message.touched}">
+                    Please enter a message
+                </div>
+
+            </form>
+            <div class="d-flex justify-content-center my-3">
+                <button class="button-82-pushable" role="button" (click)="onSubmit()" *ngIf="contactForm.valid">
+                    <span class="button-82-shadow"></span>
+                    <span class="button-82-edge"></span>
+                    <span class="button-82-front text">
+                      Submit
+                    </span>
+                </button>
+                <button class="button-82-pushable-grey" role="button" *ngIf="contactForm.invalid">
+                    <span class="button-82-front-grey text">
+                      Submit
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6 my-auto">
+            <div class="bodyText text-center d-none d-md-block" style="color:powderblue;">
+                Did you find a bug? Any suggestions? Have any questions? Send a message!
+            </div>
+            <div class="d-flex justify-content-center">
+                <img class="robo" src="../../../assets/robo-idea.gif" alt="robot">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container py-4">
+    <div class="text text-center" style="color:powderblue; font-weight: bold; font-size:15px;">
+        © 2022 Copyright: Rojaa
     </div>
 </div>
