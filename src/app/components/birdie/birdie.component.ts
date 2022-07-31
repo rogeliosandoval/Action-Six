@@ -44,7 +44,7 @@ export class Birdie {
         }
     }
 
-    //controls to get the ball to move
+    //controls to get the bird to move
     @HostListener('window:keydown', ['$event'])
     keyEvent(event: KeyboardEvent) {
         if(this.both == 0){
@@ -62,7 +62,7 @@ export class Birdie {
         }
     }
 
-    //stops the ball from moving when key is lifted up
+    //stops the bird from moving when key is lifted up
     @HostListener('window:keyup', ['$event'])
     keyEventStop() {
         clearInterval(this.interval)
@@ -81,7 +81,7 @@ export class Birdie {
 
         // var blockTop4 = parseInt(window.getComputedStyle(this.block4.nativeElement).top);
 
-        if (blockTop == 531 && characterLeft >= 20) {
+        if (blockTop > 531 && blockTop < 535 && characterLeft >= 20) {
             alert("boom");
             this.block.nativeElement.classList.add('none');
             this.hole.nativeElement.classList.add('none');
@@ -94,7 +94,7 @@ export class Birdie {
             this.gameOver = true;
         }
 
-        if (blockTop2 === 531 && (characterLeft >= 290 || characterLeft <= 210)) {
+        if (blockTop2 > 531 && blockTop2 < 535 && (characterLeft >= 290 || characterLeft <= 210)) {
             alert("boom");
             this.block.nativeElement.classList.add('none');
             this.hole.nativeElement.classList.add('none');
@@ -133,23 +133,23 @@ export class Birdie {
         // }
     }
 
-        startGame() {
-            this.begin = false;
-            setInterval(() => { this.checkCollision() }, 2);
-        }
+    startGame() {
+        this.begin = false;
+        setInterval(() => { this.checkCollision() }, 1);
+    }
 
-        //resets the game
-        reset() {
-            this.block.nativeElement.classList.remove('none');
-            this.hole.nativeElement.classList.remove('none');
-            this.block2.nativeElement.classList.remove('none');
-            this.hole2.nativeElement.classList.remove('none');
-            this.block3.nativeElement.classList.remove('none');
-            this.hole3.nativeElement.classList.remove('none');
-            this.block4.nativeElement.classList.remove('none');
-            this.block5.nativeElement.classList.remove('none');
-            this.gameOver = false;
-        }
+    //resets the game
+    reset() {
+        this.block.nativeElement.classList.remove('none');
+        this.hole.nativeElement.classList.remove('none');
+        this.block2.nativeElement.classList.remove('none');
+        this.hole2.nativeElement.classList.remove('none');
+        this.block3.nativeElement.classList.remove('none');
+        this.hole3.nativeElement.classList.remove('none');
+        this.block4.nativeElement.classList.remove('none');
+        this.block5.nativeElement.classList.remove('none');
+        this.gameOver = false;
+    }
 
     // createHole() {
     //     const block = this.renderer.createElement('div');

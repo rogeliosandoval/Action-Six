@@ -1,8 +1,9 @@
 #game {
-  width: 400px;
+  width: 420px;
   height: 650px;
   border: 1px solid #ffffff;
   margin: auto;
+  overflow: hidden;
   background-image: url("../../../assets/birdie/field.png");
   background-size: cover;
   background-position: 0px 0px;
@@ -112,7 +113,7 @@
   top: 0px;
   left:0px;
   margin-top: -20px;
-  animation: slide-down 22s infinite linear;
+  animation: slide-down 15s infinite linear;
 }
 
 .block4 {
@@ -175,7 +176,7 @@
   top: 0px;
   left: 142px;
   margin-top: -20px;
-  animation: slide-down 22s infinite linear;
+  animation: slide-down 15s infinite linear;
 }
 
 .hole4 {
@@ -195,7 +196,7 @@
 
 @keyframes slide-down {
   0%{top: 0px;}
-  100%{top: 585px;}
+  100%{top: 800px;}
 }
 
 .button-82-pushable {
