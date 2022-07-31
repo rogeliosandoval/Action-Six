@@ -2,6 +2,15 @@
     <div class="bodyText text-center my-5">
         Are you still bored? Get some ideas here!
     </div>
+    <div class="bodyText text-center my-5" style="color:powderblue; font-size: 15px;">
+        <i>Price</i>: A factor describing the cost of the event with zero being free [0, 1]
+        <br>
+        <br class="d-block d-md-none">
+        <i>Accessibility</i>: A factor describing how possible an event is to do with zero being the most accessible [0.0, 1.0]
+        <br>
+        <br class="d-block d-md-none">
+        <i>Participants</i>: The number of people that this activity could involve [0, n]
+    </div>
     <div class="card">
         <div class="titleText pt-5 text-center" *ngIf="!random">
             Get a random idea.
@@ -370,4 +379,9 @@
           Music Idea
         </span>
     </button>
+</div>
+<div class="container py-4">
+    <div class="text text-center" style="color:powderblue; font-weight: bold; font-size:15px;">
+        © 2022 Copyright: Rojaa
+    </div>
 </div>

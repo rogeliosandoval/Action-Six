@@ -82,7 +82,7 @@ export class Birdie {
         // var blockTop4 = parseInt(window.getComputedStyle(this.block4.nativeElement).top);
 
         if (blockTop > 531 && blockTop < 535 && characterLeft >= 20) {
-            alert("boom");
+            alert("the bird has been hit");
             this.block.nativeElement.classList.add('none');
             this.hole.nativeElement.classList.add('none');
             this.block2.nativeElement.classList.add('none');
@@ -95,7 +95,7 @@ export class Birdie {
         }
 
         if (blockTop2 > 531 && blockTop2 < 535 && (characterLeft >= 290 || characterLeft <= 210)) {
-            alert("boom");
+            alert("the bird has been hit");
             this.block.nativeElement.classList.add('none');
             this.hole.nativeElement.classList.add('none');
             this.block2.nativeElement.classList.add('none');
@@ -108,7 +108,7 @@ export class Birdie {
         }
 
         if (blockTop3 === 531 && (characterLeft >= 182 || characterLeft <= 102)) {
-            alert("boom");
+            alert("the bird has been hit");
             this.block.nativeElement.classList.add('none');
             this.hole.nativeElement.classList.add('none');
             this.block2.nativeElement.classList.add('none');
