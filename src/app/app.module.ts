@@ -19,6 +19,7 @@ import { GameCardComponent } from './components/memory/game-card/game-card.compo
 import { RestartDialogComponent } from './components/memory/restart-dialog/restart-dialog.component';
 import { Bored } from './components/bored/bored.compopnent';
 import { Piano } from './components/piano/piano.component';
+import { Cruise } from './components/cruise/cruise.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: 'flyaway', component: Birdie },
   { path: 'matchmemory', component: Memory },
   { path: 'bored', component: Bored },
-  { path: 'piano', component: Piano }
+  { path: 'piano', component: Piano },
+  { path: 'cruise', component: Cruise }
 ]
 
 @NgModule({
@@ -43,7 +45,8 @@ const routes: Routes = [
     GameCardComponent,
     RestartDialogComponent,
     Bored,
-    Piano
+    Piano,
+    Cruise
   ],
   imports: [
     BrowserModule,
