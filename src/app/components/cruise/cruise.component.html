@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="d-flex justify-content-center my-3">
+        <div class="bodyText text-center mt-4 mb-2">
+            It's a busy weekday and everyone is trying to get to work. Just try not to hit any of the cars. Drive safe.
+        </div>
+    </div>
+    <div class="click-info-one">
+        <div class="bodyText text-center" style="color: powderblue;">
+            Use
+            <img class="arrows" src="../../../assets/birdie/left-arrow.png" alt="">
+            <img class="arrows" src="../../../assets/birdie/right-arrow.png" alt="">
+            <img class="arrows" src="../../../assets/cruise/up-arrow.png" alt="">
+            <img class="arrows" src="../../../assets/cruise/down-arrow.png" alt="">
+            to move!
+        </div>
+    </div>
+</div>
+<div class="d-flex justify-content-center my-4">
+    <div *ngIf="begin" #game id="game">
+        <div #character id="character">
+            <img class="car" src="../../../assets/cruise/cars/white.png" alt="taxi">
+        </div>
+        <div class="d-flex justify-content-center">
+            <img class="title mt-4" src="../../../assets/cruise/cruise-title.png" alt="title">
+        </div>
+        <div class="road"></div>
+    </div>
+    <div *ngIf="!begin" #game id="game">
+        <div #character id="character">
+            <img class="car" src="../../../assets/cruise/cars/white.png" alt="car">
+        </div>
+        <div *ngIf="gameOver" class="d-flex justify-content-center">
+            <img class="title mt-5" src="../../../assets/cruise/cruise-title.png" alt="title">
+        </div>
+        <div *ngIf="gameOver" class="road-gameover"></div>
+        <div #collision class="collision" id="collision">
+            <img class="taxi-driver" src="../../../assets/cruise/cars/taxi.png" alt="taxi-driver">
+        </div>
+        <div #collision2 class="collision2" id="collision2">
+            <img class="outlaw" src="../../../assets/cruise/cars/outlaw.png" alt="outlaw">
+        </div>
+        <div #collision3 class="collision3" id="collision3">
+            <img class="red" src="../../../assets/cruise/cars/red.png" alt="red">
+        </div>
+        <div #collision4 class="collision4" id="collision4">
+            <img class="white-suv" src="../../../assets/cruise/cars/white-suv.png" alt="white-suv">
+        </div>
+        <div #collision5 class="collision5" id="collision5">
+            <img class="cloud" src="../../../assets/birdie/cloud.png" alt="cloud">
+        </div>
+        <div #collision6 class="collision6" id="collision6">
+            <img class="cloud" src="../../../assets/birdie/cloud.png" alt="cloud">
+        </div>
+        <div *ngIf="!gameOver" class="road-play"></div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center" *ngIf="begin">
+    <button class="button-82-pushable" role="button" (click)="startGame()">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Start Game
+        </span>
+    </button>
+</div>
+<div class="container d-flex justify-content-center" *ngIf="gameOver">
+    <button class="button-82-pushable" role="button" (click)="reset()">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Play Again
+        </span>
+    </button>
+</div>

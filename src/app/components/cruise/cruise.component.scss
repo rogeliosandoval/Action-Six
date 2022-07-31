@@ -1,0 +1,338 @@
+#game {
+width: 500px;
+height: 650px;
+border: 1px solid #ffffff;
+margin: auto;
+overflow: hidden;
+// background-image: url("../../../assets/cruise/highway.jpeg");
+// background-size: cover;
+// background-position: 0px 0px;
+}
+
+.road {
+    position: relative;
+    background: url("../../../assets/cruise/highway.jpeg");
+    background-size: contain;
+    height: 1794px;
+    top: -255px;
+    left: 0px;
+}
+
+.road-gameover {
+    position: relative;
+    background: url("../../../assets/cruise/highway.jpeg");
+    background-size: contain;
+    height: 1794px;
+    top: -280px;
+    left: 0px;
+}
+
+.road-play{
+    position: relative;
+    background: url("../../../assets/cruise/highway.jpeg");
+    background-size: contain;
+    height: 1794px;
+    top: -255px;
+    left: 0px;
+    animation: slide-play 0.8s infinite linear;
+}
+
+@keyframes slide-play {
+    0%{top: -400px;}
+    100%{top: -28px;}
+}
+
+.collision {
+    width: 57px;
+    height: 29px;
+    // height: 110px;
+    // background: paleturquoise;
+    position: relative;
+    top: 0px;
+    left: 40px;
+    margin-top: -28px;
+    animation: slide-down 3s infinite linear;
+    z-index: 1;
+}
+
+.collision2 {
+    width: 57px;
+    height: 29px;
+    // height: 110px;
+    // background: paleturquoise;
+    position: relative;
+    top: 0px;
+    left: 160px;
+    margin-top: -28px;
+    animation: slide-down 7s infinite linear;
+    z-index: 1;
+}
+
+.collision3 {
+    width: 57px;
+    height: 29px;
+    // height: 110px;
+    // background: paleturquoise;
+    position: relative;
+    top: 0px;
+    left: 400px;
+    margin-top: -28px;
+    animation: slide-down 5s infinite linear;
+    z-index: 1;
+}
+
+.collision4 {
+    width: 57px;
+    height: 29px;
+    // height: 110px;
+    // background: paleturquoise;
+    position: relative;
+    top: 0px;
+    left: 280px;
+    margin-top: -28px;
+    animation: slide-down 10s infinite linear;
+    z-index: 1;
+}
+
+.collision5 {
+    width: 57px;
+    height: 29px;
+    // height: 110px;
+    // background: paleturquoise;
+    position: relative;
+    top: 0px;
+    left: 150px;
+    margin-top: -28px;
+    animation: slide-down 15s infinite linear;
+    z-index: 4;
+}
+
+.collision6 {
+    width: 57px;
+    height: 29px;
+    // height: 110px;
+    // background: paleturquoise;
+    position: relative;
+    top: 0px;
+    left: -134px;
+    margin-top: -28px;
+    animation: slide-down 5s infinite linear;
+    z-index: 4;
+}
+
+#character {
+width: 20px;
+height: 20px;
+// background: red;
+border-radius: 50%;
+position: relative;
+top: 500px;
+left: 293px;
+z-index: 3;
+}
+
+.title {
+    z-index: 3;
+}
+
+.bodyText {
+color: white;
+font-size: 17px;
+}
+
+.intro-leaf {
+width: 6%;
+transform: scaleX(-1);
+}
+
+.arrows {
+width: 6%;
+padding: 5px;
+}
+
+.car {
+height: 130px;
+width: auto;
+position: relative;
+top: -18px;
+left: -20px;
+}
+
+.block {
+width: 500px;
+height: 20px;
+background: white;
+position: relative;
+top: 0px;
+left: 0px;
+margin-top: -20px;
+animation: slide-down 4s infinite linear;
+z-index: 1;
+}
+
+.taxi-driver {
+    width: auto;
+    height: 130px;
+    position: relative;
+    top: -10px;
+    left: -7px;
+    transform: scaleX(-1);
+}
+
+.outlaw {
+    width: auto;
+    height: 130px;
+    position: relative;
+    top: -10px;
+    left: -7px;
+    transform: scaleX(-1);
+}
+
+.red {
+    width: auto;
+    height: 130px;
+    position: relative;
+    top: -10px;
+    left: -7px;
+    transform: scaleX(-1);
+}
+
+.white-suv {
+    width: auto;
+    height: 130px;
+    position: relative;
+    top: -10px;
+    left: -7px;
+    transform: scaleX(-1);
+}
+
+.cloud {
+    width: auto;
+    height: 200px;
+    position: relative;
+    top: -10px;
+    left: 174px;
+    z-index: 1000;
+  }
+
+.none {
+display: none;
+}
+
+@keyframes slide-down {
+0%{top: -130px;}
+100%{top: 670px;}
+}
+
+.button-82-pushable {
+position: relative;
+border: none;
+background: transparent;
+padding: 0;
+cursor: pointer;
+outline-offset: 4px;
+transition: filter 250ms;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.button-82-shadow {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 12px;
+background: hsl(0deg 0% 0% / 0.25);
+will-change: transform;
+transform: translateY(2px);
+transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 12px;
+background: linear-gradient(
+    to left,
+    hsl(240deg 100% 16%) 0%,
+    hsl(240deg 100% 32%) 8%,
+    hsl(240deg 100% 32%) 92%,
+    hsl(240deg 100% 16%) 100%
+);
+}
+
+.button-82-front {
+display: block;
+position: relative;
+padding: 12px 27px;
+border-radius: 12px;
+font-size: 1.1rem;
+color: white;
+background: hsl(200deg 100% 47%);
+will-change: transform;
+transform: translateY(-4px);
+transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+.button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+}
+}
+
+.button-82-pushable:hover {
+filter: brightness(110%);
+-webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+transform: translateY(-6px);
+transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+transform: translateY(-2px);
+transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+transform: translateY(4px);
+transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+transform: translateY(1px);
+transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+outline: none;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+    .bodyText {
+        font-size: 19px;
+        color: white;
+    }
+
+}
