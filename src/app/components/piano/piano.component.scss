@@ -3,6 +3,10 @@
     font-size: 17px;
 }
 
+.copyright {
+    display:none;
+}
+
 .letter-white {
     position: relative;
     top: 360px;
@@ -90,6 +94,10 @@
 
     .phone-message {
         display: none;
+    }
+
+    .copyright {
+        display: block;
     }
 
 }

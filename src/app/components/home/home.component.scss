@@ -14,6 +14,10 @@
     text-transform: uppercase;
 }
 
+.na {
+    display: block;
+}
+
 .flyaway {
     display: none;
 }
@@ -291,5 +295,9 @@ outline: none;
 
     .mobile-show {
         display: none !important;
+    }
+
+    .na {
+        display: none;
     }
 }
