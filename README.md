@@ -16,3 +16,6 @@ This application has 5 javascript games the user can play when boredom hits. A c
 <br>
 <br>
 Creating this application allowed me to practice manipulating DOM elements through the Angular framework as well as to brush up on some programming skills. A great refresher on the basic fundamentals of javascript and HTML and taking them to a greater height.
+<br>
+<br>
+<img src="actionsix.gif" width="100%" height="auto">
