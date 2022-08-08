@@ -55,7 +55,6 @@ export class Contact {
 
     onSubmit() {
         this.modalService.open(NgbdModalContent);
-        console.log(this.contactForm.value);
         this.contactForm.reset();
     }
 
