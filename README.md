@@ -1,27 +1,27 @@
-# ActionSix
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<h1>Action 6</h1>
+<h3>Framework Used:</h3>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" width="68px;"/>
+<h3>Languages Used:</h3>
+<p float="left">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" width="60px;"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="60px;"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" width="60px;"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="60px;"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg" width="60px;"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="60px;"/> 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" width="60px;"/>
+<br>
+<br>
+This application has 5 javascript games the user can play when boredom hits. A call to a "bored" API is also proivded to give the user ideas on what else they can do to pass the time. Controls and rules are provided with each game.
+<br>
+<br>
+Creating this application allowed me to practice manipulating DOM elements through the Angular framework as well as to brush up on some programming skills. A great refresher on the basic fundamentals of javascript and HTML and taking them to a greater height.
+<br>
+<br>
+Photoshop was used to create the game cards along with all of the sprites. The logo is custom made as well using an online generator called <a href="https://cooltext.com/"><b>Cooltext</b></a>, I highly recommend it for use in any of your personal projects.
+<br>
+<br>
+More functionality and updates are planned for the future such as a scoring system, more playable sprites, etc.. but overall this project was a lot of fun to make!
+<br>
+<br>
+<img src="actionsix.gif" width="100%" height="auto">
