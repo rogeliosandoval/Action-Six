@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "action-six"
+  },
+  "targets": {
+    "action-six": {
+      "hosting": {
+        "action-six": [
+          "action-six"
+        ]
+      }
+    }
   }
 }

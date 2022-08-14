@@ -25,6 +25,12 @@ import { Cruise } from './components/cruise/cruise.component';
 import { About } from './components/about/about.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Contact } from './components/contact/contact.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 
 const routes: Routes = [
@@ -68,7 +74,11 @@ const routes: Routes = [
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase()),
+    AngularFireModule.initializeApp(environment.firebase, 'action-six'),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
