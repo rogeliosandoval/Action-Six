@@ -1,6 +1,7 @@
 {
   "hosting": [
     {
+      "target": "action-six",
       "public": "dist/action-six",
       "ignore": [
         "firebase.json",
