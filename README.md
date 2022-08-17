@@ -26,4 +26,4 @@ Photoshop was used to create the game cards along with all of the sprites. The l
 More functionality and updates are planned for the future such as a scoring system, more playable sprites, etc.. but overall this project was a lot of fun to make!
 <br>
 <br>
-<img src="actionsix.gif" width="100%" height="auto">
+<img src="actionsix.gif" alt="actionsix" width="100%" height="auto">
