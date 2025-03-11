@@ -23,7 +23,7 @@ Creating this application allowed me to practice manipulating DOM elements throu
 Photoshop was used to create the game cards along with all of the sprites. The logo is custom made as well using an online generator called <a href="https://cooltext.com/"><b>Cooltext</b></a>, I highly recommend it for use in any of your personal projects.
 <br>
 <br>
-Thank you!
+<b>Update:</b> This was one of my first projects so the bored API may not be available anymore as well as the images for the memory game. The other games are fine!
 <br>
 <br>
 <img src="actionsix.gif" alt="actionsix" width="100%" height="auto">
