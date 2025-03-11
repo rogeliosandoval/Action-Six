@@ -14,7 +14,7 @@
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" width="60px;"/>
 <br>
 <br>
-This application has 5 JavaScript games the user can play when boredom hits. A call to a "bored" API is also proivded to give the user ideas on what else they can do to pass the time. Controls and rules are provided with each game.
+This application has 5 JavaScript games the user can play.
 <br>
 <br>
 Creating this application allowed me to practice manipulating DOM elements through the Angular framework as well as to brush up on some programming skills. A great refresher on the basic fundamentals of JavaScript and HTML, taking them to a greater height.
@@ -23,7 +23,7 @@ Creating this application allowed me to practice manipulating DOM elements throu
 Photoshop was used to create the game cards along with all of the sprites. The logo is custom made as well using an online generator called <a href="https://cooltext.com/"><b>Cooltext</b></a>, I highly recommend it for use in any of your personal projects.
 <br>
 <br>
-More functionality and updates are planned for the future such as a scoring system, more playable sprites, etc.. but overall this project was a lot of fun to make!
+Thank you!
 <br>
 <br>
 <img src="actionsix.gif" alt="actionsix" width="100%" height="auto">
